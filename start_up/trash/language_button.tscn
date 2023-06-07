@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxcfhknf5lrj"]
+
+[ext_resource type="Script" path="res://start_up/trash/language_button.gd" id="1_q6dtb"]
+
+[node name="LanguageButton" type="Button"]
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "Deutsch"
+script = ExtResource("1_q6dtb")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

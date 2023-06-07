@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://dabdcg3fdnxnr"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_5xjep"]
+[ext_resource type="Texture2D" uid="uid://o5q5xeeiy8fg" path="res://icon.svg" id="2_vhbwv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qhfq"]
+font_size = 32
+
+[node name="Menu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.113725, 0.133333, 0.160784, 1)
+script = ExtResource("1_5xjep")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.5
+anchor_right = 0.375
+anchor_bottom = 0.5
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_play"
+
+[node name="Load" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_load"
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_settings"
+
+[node name="Credits" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_credits"
+
+[node name="Godot" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_godot"
+
+[node name="Itch" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_itch"
+
+[node name="GameJam" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_gamejam"
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "$_quit"
+
+[node name="DemoContent" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="VBoxContainer" parent="DemoContent"]
+layout_mode = 2
+alignment = 1
+
+[node name="Project" type="Label" parent="DemoContent/Container"]
+layout_mode = 2
+text = "My Fancy Project"
+label_settings = SubResource("LabelSettings_1qhfq")
+
+[node name="Logo" type="TextureRect" parent="DemoContent/Container"]
+layout_mode = 2
+texture = ExtResource("2_vhbwv")
+stretch_mode = 3
+
+[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Buttons/Godot" to="." method="_on_godot_pressed"]
+[connection signal="pressed" from="Buttons/Itch" to="." method="_on_itch_pressed"]
+[connection signal="pressed" from="Buttons/GameJam" to="." method="_on_game_jam_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
