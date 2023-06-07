@@ -7,7 +7,7 @@ extends Node
 @export_category("Window Settings")
 @export var exclusive_fullscreen: bool = false
 
-var e
+
 var current_scene: int = 0
 var language: String = "":
 	set(new_language):
