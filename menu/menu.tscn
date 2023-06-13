@@ -26,35 +26,35 @@ grow_vertical = 2
 
 [node name="Play" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_play"
+text = "$_PLAY"
 
 [node name="Load" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_load"
+text = "$_LOAD"
 
 [node name="Settings" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_settings"
+text = "$_SETTINGS"
 
 [node name="Credits" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_credits"
+text = "$_CREDITS"
 
 [node name="Godot" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_godot"
+text = "$_GODOT"
 
 [node name="Itch" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_itch"
+text = "$_ITCH"
 
 [node name="GameJam" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_gamejam"
+text = "$_GAMEJAM"
 
 [node name="Quit" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "$_quit"
+text = "$_QUIT"
 
 [node name="DemoContent" type="CenterContainer" parent="."]
 layout_mode = 1

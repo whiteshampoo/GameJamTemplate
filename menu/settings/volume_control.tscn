@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk6vh8hbd7fjh"]
+
+[ext_resource type="Script" path="res://menu/settings/volume_control.gd" id="1_teg25"]
+
+[node name="VolumeControl" type="GridContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+script = ExtResource("1_teg25")
+
+[node name="Bus_Label" type="Label" parent="."]
+layout_mode = 2
+text = "BusName"
+
+[node name="Bus_Volume" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+tick_count = 5
+
+[node name="Bus_Mute" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+toggle_mode = true
+text = "$_MUTE"

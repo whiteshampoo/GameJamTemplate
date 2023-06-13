@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://rh17iio3nb7n"]
+[gd_scene load_steps=2 format=3 uid="uid://rh17iio3nb7n"]
+
+[ext_resource type="Script" path="res://start_up/blank.gd" id="1_yfgph"]
 
 [node name="Blank" type="ColorRect"]
 anchors_preset = 15
@@ -7,3 +9,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 1, 1)
+script = ExtResource("1_yfgph")

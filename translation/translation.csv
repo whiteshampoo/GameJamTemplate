@@ -1,11 +1,14 @@
 keys,de,en
-$_language,Deutsch,English
-$_play,Spielen,Play
-$_load,Laden,Load
-$_save,Speichern,Save
-$_settings,Einstellungen,Settings
-$_credits,Credits,Credits
-$_godot,Godot Website,Godot Website
-$_itch,Mein Itch,My Itch
-$_gamejam,Godot Wild Jam,Godot Wild Jam
-$_quit,Beenden,Quit
+$_LANGUAGE,Deutsch,English
+$_PLAY,Spielen,Play
+$_LOAD,Laden,Load
+$_SAVE,Speichern,Save
+$_SETTINGS,Einstellungen,Settings
+$_CREDITS,Credits,Credits
+$_GODOT,Godot Website,Godot Website
+$_ITCH,Mein Itch,My Itch
+$_GAMEJAM,Godot Wild Jam,Godot Wild Jam
+$_QUIT,Beenden,Quit
+$_MUTE,Stumm,Mute
+$_MUSIC,Musik,Music
+$_SOUNDS,Geräusche,Sounds

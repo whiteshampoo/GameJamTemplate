@@ -8,5 +8,3 @@
 [node name="Game" type="Node"]
 script = ExtResource("1_qxsq0")
 start_up_scenes = Array[PackedScene]([ExtResource("2_isyr4"), ExtResource("3_dnyfm"), ExtResource("4_qc3wt")])
-skip_to_scene = 3
-skip_startup = true

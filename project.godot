@@ -17,6 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Config="*res://global/config.tscn"
+Video="*res://global/video.tscn"
+Audio="*res://global/audio.tscn"
 Game="*res://global/game.tscn"
 
 [display]

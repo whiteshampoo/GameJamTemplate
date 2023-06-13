@@ -1,29 +1,22 @@
 extends Node
 
 @export var config_file: String = "user://settings.ini"
-@export var user_buses: PackedStringArray = ["Master"]
+@export var fresh_in_editor: bool = false
+
 
 @onready var settings: Dictionary = {
-	"video": {
-		"width": ProjectSettings.get_setting("display/window/size/viewport_width"),
-		"height": ProjectSettings.get_setting("display/window/size/viewport_height"),
-		"mode": ProjectSettings.get_setting("display/window/size/mode"),
-		"exclusive_fullscreen": false,
-		"vsync": ProjectSettings.get_setting("display/window/vsync/vsync_mode"),
-	},
-	"audio": {
-		# filled in _ready
+	"video": Video.get_settings(),
+	"audio": Audio.get_settings(),
+	"misc": {
+		"locale": "",
 	}
+	# expand me
 }
 
 func _ready() -> void:
-	for bus in user_buses:
-		if not AudioBus.exists(bus):
-			push_error("Unknown audiobus: %s" % bus)
-			continue
-		settings["audio"]["%s_volume" % bus] = AudioBus.get_volume(bus)
-		settings["audio"]["%s_mute" % bus] = AudioBus.is_mute(bus)
-	load_config()
+	if Game.is_debug() and fresh_in_editor:
+		return
+	load_config()	
 
 
 func load_config() -> void:
@@ -61,4 +54,8 @@ func save_config() -> void:
 
 
 func _on_tree_exited() -> void:
+	settings["video"] = Video.get_settings()
+	settings["audio"] = Audio.get_settings()
+	settings["misc"]["locale"] = TranslationServer.get_locale()
+	# expand me
 	save_config()
