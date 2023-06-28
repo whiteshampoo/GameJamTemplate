@@ -11,15 +11,17 @@ const VSYNC: Dictionary = {
 
 
 func _ready() -> void:
-	var window: Window = get_window()
-	window.min_size = get_min_size()
-	window.size = Config.settings["video"]["size"]
+	var Win: Window = get_window()
+	Win.min_size = get_min_size()
+	Win.size = Config.settings["video"]["size"]
+	Win.position = Config.settings["video"]["position"]
 	exclusive_fullscreen = Config.settings["video"]["exclusive_fullscreen"]
+	
 	
 	var mode: Window.Mode = Config.settings["video"]["mode"]
 	if mode in [Window.MODE_FULLSCREEN, Window.MODE_EXCLUSIVE_FULLSCREEN]:
 		mode = Window.MODE_EXCLUSIVE_FULLSCREEN if exclusive_fullscreen else Window.MODE_FULLSCREEN
-	window.mode = mode
+	Win.mode = mode
 	
 	var vsync: DisplayServer.VSyncMode = Config.settings["video"]["vsync"]
 	if not vsync in VSYNC:
@@ -39,6 +41,7 @@ func get_settings() -> Dictionary:
 	return {
 		"size": DisplayServer.window_get_size(),
 		"mode": DisplayServer.window_get_mode(),
+		"position": DisplayServer.window_get_position(),
 		"exclusive_fullscreen": exclusive_fullscreen,
 		"vsync": DisplayServer.window_get_vsync_mode(),
 	}
