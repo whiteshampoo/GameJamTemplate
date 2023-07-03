@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ivhk5w26001j"]
+
+[ext_resource type="Script" path="res://menu/settings/language_selector.gd" id="1_ms1nx"]
+
+[node name="LanguageSelector" type="OptionButton"]
+script = ExtResource("1_ms1nx")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

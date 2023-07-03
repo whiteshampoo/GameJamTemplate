@@ -1,10 +1,13 @@
 extends Node
 
+signal locale_changed(locale: String)
+
 @export_category("Startup Settings")
 @export var start_up_scenes: Array[PackedScene]
 @export var skip_to_scene: int = 0
 @export var skip_startup: bool = false
 
+@onready var locales: Dictionary = load_locales()
 
 var current_scene: int = 0
 
@@ -20,6 +23,13 @@ func _ready() -> void:
 		if skip_startup:
 			current_scene = start_up_scenes.size() - 1
 	next_scene()
+
+
+func load_locales() -> Dictionary:
+	var output: Dictionary = Dictionary()
+	for locale in TranslationServer.get_loaded_locales():
+		output[locale] = TranslationServer.get_translation_object(locale).get_message("$_LANGUAGE")
+	return output
 
 
 func is_debug() -> bool:
@@ -41,3 +51,10 @@ func change_scene_to_packed(packed_scene: PackedScene) -> Error:
 func next_scene() -> void:
 	change_scene_to_packed(start_up_scenes[current_scene])
 	current_scene = min(current_scene + 1, start_up_scenes.size() - 1)
+
+
+func change_locale(locale: String) -> void:
+	Config.settings["misc"]["locale"] = locale
+	TranslationServer.set_locale(locale)
+	locale_changed.emit(locale)
+

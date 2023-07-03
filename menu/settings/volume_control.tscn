@@ -15,9 +15,12 @@ theme_override_constants/v_separation = 8
 columns = 3
 script = ExtResource("1_teg25")
 
-[node name="Bus_Label" type="Label" parent="."]
+[node name="Bus_Label" type="Label" parent="." groups=["SettingsLabel"]]
 layout_mode = 2
+size_flags_horizontal = 8
 text = "BusName"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Bus_Volume" type="HSlider" parent="."]
 layout_mode = 2

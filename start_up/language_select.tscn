@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4ufon23ry80b"]
+[gd_scene load_steps=3 format=3 uid="uid://uiw30j7bapu3"]
 
+[ext_resource type="PackedScene" uid="uid://ddjc8i2fpugea" path="res://start_up/language_button.tscn" id="2_ia5p1"]
 [ext_resource type="Script" path="res://start_up/language_select.gd" id="2_t0ogr"]
-[ext_resource type="PackedScene" uid="uid://ddjc8i2fpugea" path="res://start_up/lang_button.tscn" id="2_vf1rn"]
 
 [node name="LanguageSelect" type="ColorRect"]
 anchors_preset = 15
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("2_t0ogr")
-lang_button = ExtResource("2_vf1rn")
+lang_button = ExtResource("2_ia5p1")
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 layout_mode = 1

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cheuoblifq33j"]
+
+[ext_resource type="Script" path="res://menu/settings/v_sync_selector.gd" id="1_kalce"]
+
+[node name="VSyncSelector" type="OptionButton"]
+offset_right = 14.0
+offset_bottom = 20.0
+script = ExtResource("1_kalce")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

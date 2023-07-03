@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy3s4evrawsrm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ud0eh"]
+font_size = 24
+
+[node name="SectionLabel" type="Label"]
+size_flags_vertical = 6
+text = "Section"
+label_settings = SubResource("LabelSettings_ud0eh")
