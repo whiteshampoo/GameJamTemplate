@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("2_t0ogr")
+skip_on_os_locale = false
 lang_button = ExtResource("2_ia5p1")
 
 [node name="Buttons" type="HBoxContainer" parent="."]

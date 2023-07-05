@@ -112,7 +112,9 @@ text = "$_EXCLUSIVE_FULLSCREEN"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="CheckBox" type="CheckBox" parent="Divider/Video/Settings"]
+[node name="Exclusive" type="CheckBox" parent="Divider/Video/Settings"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+
+[connection signal="toggled" from="Divider/Video/Settings/Exclusive" to="." method="_on_exclusive_toggled"]
