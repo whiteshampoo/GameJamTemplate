@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dabdcg3fdnxnr"]
+[gd_scene load_steps=5 format=3 uid="uid://dabdcg3fdnxnr"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_5xjep"]
+[ext_resource type="PackedScene" uid="uid://cud3k1jwxfee6" path="res://menu/menu_button.tscn" id="2_rey0l"]
 [ext_resource type="Texture2D" uid="uid://o5q5xeeiy8fg" path="res://icon.svg" id="2_vhbwv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1qhfq"]
@@ -33,37 +34,41 @@ anchor_right = 0.375
 anchor_bottom = 0.5
 grow_vertical = 2
 
-[node name="Play" type="Button" parent="Buttons"]
+[node name="Play" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_PLAY"
 
-[node name="Load" type="Button" parent="Buttons"]
+[node name="Load" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_LOAD"
 
-[node name="Settings" type="Button" parent="Buttons"]
+[node name="Settings" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_SETTINGS"
 
-[node name="Credits" type="Button" parent="Buttons"]
+[node name="Credits" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_CREDITS"
 
-[node name="Godot" type="Button" parent="Buttons"]
+[node name="Godot" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_GODOT"
+target = "https://godotengine.org/"
 
-[node name="Itch" type="Button" parent="Buttons"]
+[node name="Itch" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_ITCH"
+target = "https://whiteshampoo.itch.io/"
 
-[node name="GameJam" type="Button" parent="Buttons"]
+[node name="GameJam" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_GAMEJAM"
+target = "https://godotwildjam.com/"
 
-[node name="Quit" type="Button" parent="Buttons"]
+[node name="Quit" parent="Buttons" instance=ExtResource("2_rey0l")]
 layout_mode = 2
 text = "$_QUIT"
+target = "QUIT"
 
 [node name="DemoContent" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -88,12 +93,3 @@ label_settings = SubResource("LabelSettings_1qhfq")
 layout_mode = 2
 texture = ExtResource("2_vhbwv")
 stretch_mode = 3
-
-[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Buttons/Load" to="." method="_on_load_pressed"]
-[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Buttons/Godot" to="." method="_on_godot_pressed"]
-[connection signal="pressed" from="Buttons/Itch" to="." method="_on_itch_pressed"]
-[connection signal="pressed" from="Buttons/GameJam" to="." method="_on_game_jam_pressed"]
-[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

@@ -58,3 +58,6 @@ func change_locale(locale: String) -> void:
 	TranslationServer.set_locale(locale)
 	locale_changed.emit(locale)
 
+
+func quit() -> void:
+	get_tree().quit()
