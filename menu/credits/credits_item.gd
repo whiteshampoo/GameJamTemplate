@@ -4,3 +4,5 @@ extends Resource
 @export var name: String
 @export var author: String
 @export var url: String
+
+@export var updated: bool = true

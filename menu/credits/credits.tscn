@@ -1,10 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://3asrjje8ede"]
+[gd_scene load_steps=12 format=3 uid="uid://3asrjje8ede"]
 
 [ext_resource type="PackedScene" uid="uid://cn5vdug47p4qx" path="res://menu/templates/sub_menu_template.tscn" id="1_yiniq"]
 [ext_resource type="Script" path="res://menu/credits/credits.gd" id="2_7xxck"]
+[ext_resource type="Script" path="res://menu/credits/credits_item.gd" id="3_0oi6g"]
+[ext_resource type="Script" path="res://menu/credits/credits_category.gd" id="4_01rme"]
+[ext_resource type="Script" path="res://menu/credits/credits_resource.gd" id="5_rdoil"]
+
+[sub_resource type="Resource" id="Resource_urywj"]
+script = ExtResource("3_0oi6g")
+name = "abc"
+author = "cba"
+url = ""
+updated = false
+
+[sub_resource type="Resource" id="Resource_xvahf"]
+script = ExtResource("4_01rme")
+name = "Example"
+items = Array[ExtResource("3_0oi6g")]([SubResource("Resource_urywj")])
+
+[sub_resource type="Resource" id="Resource_m56nl"]
+script = ExtResource("3_0oi6g")
+name = "foo"
+author = "bar"
+url = ""
+updated = false
+
+[sub_resource type="Resource" id="Resource_7pb8l"]
+script = ExtResource("3_0oi6g")
+name = "xyz"
+author = "zyx"
+url = ""
+updated = false
+
+[sub_resource type="Resource" id="Resource_7u5kl"]
+script = ExtResource("4_01rme")
+name = "Bla"
+items = Array[ExtResource("3_0oi6g")]([SubResource("Resource_m56nl"), SubResource("Resource_7pb8l")])
+
+[sub_resource type="Resource" id="Resource_u5huu"]
+script = ExtResource("5_rdoil")
+categories = Array[ExtResource("4_01rme")]([SubResource("Resource_xvahf"), SubResource("Resource_7u5kl")])
 
 [node name="Credits" instance=ExtResource("1_yiniq")]
 script = ExtResource("2_7xxck")
-locate_credits = null
-title = null
-categories = null
+credits = SubResource("Resource_u5huu")
