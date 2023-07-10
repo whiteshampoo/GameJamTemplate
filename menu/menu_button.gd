@@ -1,4 +1,3 @@
-class_name MainMenuButton
 extends Button
 
 var SPECIAL: Dictionary = {
@@ -25,8 +24,9 @@ var SPECIAL: Dictionary = {
 
 func _ready() -> void:
 	if target == "":
-		push_warning("No target selected for MainMenuButton '%s'" % name)
+		push_warning("No target selected for '%s'" % name)
 		return
+	
 	pressed.connect(_on_pressed)
 
 
