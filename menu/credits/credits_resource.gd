@@ -2,7 +2,7 @@
 class_name Credits
 extends Resource
 
-@export var categories: Array[CreditsCategory]
+@export var categories: Array#[CreditsCategory]
 
 func _init(clean: bool = false) -> void:
 	if is_instance_valid(categories) or clean:

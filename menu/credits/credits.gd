@@ -23,11 +23,11 @@ extends Control
 				print(category.name)
 				var category_id: int = credits.get_category_index(category.name)
 				if category_id == -1:
+					print("new")
 					credits.categories.append(category)
 					continue
-				
+				print("known")
 				var known_category: CreditsCategory = credits.categories[category_id]
-				prints("xxx", known_category.has_method("get_item_index"))
 				for item in category.items:
 					var item_id: int = known_category.get_item_index(item.name)
 					if item_id == -1:
@@ -57,6 +57,9 @@ extends Control
 @export var target: String = "credits.tres"
 @export var title: String = "MyAwesomeGame"
 @export var credits: Credits
+
+func _ready() -> void:
+	locate_credits = true
 
 func get_credits(path: String) -> PackedStringArray:
 	if not DirAccess.dir_exists_absolute(path):

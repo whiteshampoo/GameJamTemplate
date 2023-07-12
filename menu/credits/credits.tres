@@ -34,4 +34,4 @@ items = Array[ExtResource("1_vbof0")]([SubResource("Resource_m56nl"), SubResourc
 
 [resource]
 script = ExtResource("3_igjmd")
-categories = Array[ExtResource("1_2ocqr")]([SubResource("Resource_xvahf"), SubResource("Resource_7u5kl")])
+categories = [SubResource("Resource_xvahf"), SubResource("Resource_7u5kl")]

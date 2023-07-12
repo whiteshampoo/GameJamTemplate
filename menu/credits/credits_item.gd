@@ -1,3 +1,4 @@
+@tool
 class_name CreditsItem
 extends Resource
 
@@ -5,4 +6,4 @@ extends Resource
 @export var author: String
 @export var url: String
 
-@export var updated: bool = true
+var updated: bool = true
