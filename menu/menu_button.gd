@@ -14,7 +14,8 @@ var SPECIAL: Dictionary = {
 		if FileAccess.file_exists(new_target):
 			target = new_target
 			return
-		if new_target.begins_with("https://") and new_target.split(".", false).size() > 1:
+		
+		if Tools.is_url(new_target):
 			target = new_target
 			return
 		

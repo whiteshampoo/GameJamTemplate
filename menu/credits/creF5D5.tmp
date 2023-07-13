@@ -53,31 +53,11 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]
-[font_size=32][color=ffffffff]MyAwesomeGame[/color][/font_size]
-
-
-
-[font_size=24][color=ffffffff]Development[/color][/font_size]
-
-[table=3]
-[cell][right][font_size=16][color=ffffffff]Programming[/color][/font_size]
-[/right][/cell][cell][code]    [/code][/cell][cell][left][font_size=16][color=ffffffff]Benedikt Wicklein[/color][/font_size]
-[/left][/cell]
+[font_size=32]test[/font_size]
+[table=2]
+[cell][right]1[/right][/cell]
+[cell]abc[/cell]
+[cell]xyz[/cell]
+[cell][left]2[/left][/cell]
 [/table]
-
-
-
-[font_size=24][color=ffffffff]Software[/color][/font_size]
-
-[table=3]
-[cell][right][font_size=16][color=ffffffff][url=https://godotengine.org]Godot Engine[/url][/color][/font_size]
-[/right][/cell][cell][code]    [/code][/cell][cell][left][font_size=16][color=ffffffff][/color][/font_size]
-[/left][/cell]
-[cell][right][font_size=16][color=ffffffff]GameJamTemplate[/color][/font_size]
-[/right][/cell][cell][code]    [/code][/cell][cell][left][font_size=16][color=ffffffff]Benedikt Wicklein[/color][/font_size]
-[/left][/cell]
-[/table]
-
-
-
 [/center]"

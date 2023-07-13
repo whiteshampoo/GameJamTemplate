@@ -6,31 +6,31 @@
 
 [sub_resource type="Resource" id="Resource_urywj"]
 script = ExtResource("1_vbof0")
-name = "abc"
-author = "cba"
-url = ""
+name = "Godot Engine"
+author = ""
+url = "https://godotengine.org"
+
+[sub_resource type="Resource" id="Resource_jytef"]
+script = ExtResource("1_vbof0")
+name = "GameJamTemplate"
+author = "Benedikt Wicklein"
+url = "\"https://github.com/whiteshampoo/GameJamTemplate\""
 
 [sub_resource type="Resource" id="Resource_xvahf"]
 script = ExtResource("1_2ocqr")
-name = "Example"
-items = Array[ExtResource("1_vbof0")]([SubResource("Resource_urywj")])
+name = "Software"
+items = Array[ExtResource("1_vbof0")]([SubResource("Resource_urywj"), SubResource("Resource_jytef")])
 
 [sub_resource type="Resource" id="Resource_m56nl"]
 script = ExtResource("1_vbof0")
-name = "foo"
-author = "bar"
-url = ""
-
-[sub_resource type="Resource" id="Resource_7pb8l"]
-script = ExtResource("1_vbof0")
-name = "xyz"
-author = "zyx"
+name = "Programming"
+author = "Benedikt Wicklein"
 url = ""
 
 [sub_resource type="Resource" id="Resource_7u5kl"]
 script = ExtResource("1_2ocqr")
-name = "Bla"
-items = Array[ExtResource("1_vbof0")]([SubResource("Resource_m56nl"), SubResource("Resource_7pb8l")])
+name = "Development"
+items = Array[ExtResource("1_vbof0")]([SubResource("Resource_m56nl")])
 
 [resource]
 script = ExtResource("3_igjmd")
