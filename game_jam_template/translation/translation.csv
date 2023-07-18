@@ -1,0 +1,31 @@
+keys,de,en
+$_LANGUAGE,Deutsch,English
+$_PLAY,Spielen,Play
+$_LOAD,Laden,Load
+$_SAVE,Speichern,Save
+$_SETTINGS,Einstellungen,Settings
+$_CREDITS,Credits,Credits
+$_GODOT,Godot Website,Godot Website
+$_ITCH,Mein Itch,My Itch
+$_GAMEJAM,Godot Wild Jam,Godot Wild Jam
+$_QUIT,Beenden,Quit
+$_BACK,Zurück,Back
+$_MUTE,Stumm,Mute
+$_MUSIC,Musik,Music
+$_SOUNDS,Geräusche,Sounds
+$_MISC,Verschiedenes,Miscellaneous
+$_AUDIO,Audio,Audio
+$_VIDEO,Video,Video
+$_VSYNC,VSync,VSync
+$_EXCLUSIVE_FULLSCREEN,Exklusives Vollbild,Exclusive Fullscreen
+$_FULLSCREEN,Vollbild,Fullscreen
+$_WINDOW,Fenster,Window
+$_MAXIMIZED,Maximiert,Maximized
+$_VSYNC_DISABLED,Aus,Off
+$_VSYNC_ENABLED,An,On
+$_VSYNC_ADAPTIVE,Adaptiv,Adaptive
+$_VSYNC_MAILBOX,Mailbox,Mailbox
+$_WINDOW_MODE,Modus,Mode
+$_WINDOW_WINDOWED,Fenster,Window
+$_WINDOW_MAXIMIZED,Maximiert,Maximized
+$_WINDOW_FULLSCREEN,Vollbild,Fullscreen

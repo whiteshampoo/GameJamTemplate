@@ -11,16 +11,16 @@ config_version=5
 [application]
 
 config/name="GameJamTemplate"
-run/main_scene="res://start_up/blank.tscn"
+run/main_scene="res://game_jam_template/start_up/blank.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Config="*res://global/config.tscn"
-Video="*res://global/video.tscn"
-Audio="*res://global/audio.tscn"
-Game="*res://global/game.tscn"
+Config="*res://game_jam_template/global/config.tscn"
+Video="*res://game_jam_template/global/video.tscn"
+Audio="*res://game_jam_template/global/audio.tscn"
+Game="*res://game_jam_template/global/game.tscn"
 
 [display]
 
@@ -37,4 +37,4 @@ toggle_fullscreen={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translation/translation.de.translation", "res://translation/translation.en.translation")
+locale/translations=PackedStringArray("res://game_jam_template/translation/translation.de.translation", "res://game_jam_template/translation/translation.en.translation")

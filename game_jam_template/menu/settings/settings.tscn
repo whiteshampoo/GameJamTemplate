@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://djg4y5rsdknu2"]
+
+[ext_resource type="PackedScene" uid="uid://cn5vdug47p4qx" path="res://game_jam_template/menu/templates/sub_menu_template.tscn" id="1_2mg1u"]
+[ext_resource type="Script" path="res://game_jam_template/menu/settings/settings.gd" id="2_t4v3d"]
+[ext_resource type="PackedScene" uid="uid://cy3s4evrawsrm" path="res://game_jam_template/menu/settings/section_label.tscn" id="3_1c4m7"]
+[ext_resource type="PackedScene" uid="uid://ivhk5w26001j" path="res://game_jam_template/menu/settings/language_selector.tscn" id="4_yicq4"]
+[ext_resource type="PackedScene" uid="uid://bk6vh8hbd7fjh" path="res://game_jam_template/menu/settings/volume_control.tscn" id="5_tpkqm"]
+[ext_resource type="PackedScene" uid="uid://cheuoblifq33j" path="res://game_jam_template/menu/settings/v_sync_selector.tscn" id="6_vy66x"]
+[ext_resource type="PackedScene" uid="uid://bhkev0hr2f5pq" path="res://game_jam_template/menu/settings/mode_selector.tscn" id="7_ytaul"]
+[ext_resource type="PackedScene" uid="uid://dkbu5nl75d8ot" path="res://game_jam_template/menu/settings/exclusive_fullscreen.tscn" id="8_21mqj"]
+
+[node name="SubMenuTemplate" instance=ExtResource("1_2mg1u")]
+script = ExtResource("2_t4v3d")
+
+[node name="Divider" type="VBoxContainer" parent="." index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="SettingsLabel" parent="Divider" index="0" instance=ExtResource("3_1c4m7")]
+layout_mode = 2
+size_flags_vertical = 1
+text = "$_SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Misc" type="VBoxContainer" parent="Divider" index="1"]
+layout_mode = 2
+
+[node name="SectionLabel" parent="Divider/Misc" index="0" instance=ExtResource("3_1c4m7")]
+layout_mode = 2
+text = "$_MISC"
+vertical_alignment = 1
+
+[node name="Settings" type="GridContainer" parent="Divider/Misc" index="1"]
+layout_mode = 2
+columns = 2
+
+[node name="LabelLanguage" type="Label" parent="Divider/Misc/Settings" index="0" groups=["SettingsLabel"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Language"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LanguageSelect" parent="Divider/Misc/Settings" index="1" instance=ExtResource("4_yicq4")]
+layout_mode = 2
+
+[node name="Audio" type="VBoxContainer" parent="Divider" index="2"]
+layout_mode = 2
+
+[node name="SectionLabel" parent="Divider/Audio" index="0" instance=ExtResource("3_1c4m7")]
+layout_mode = 2
+text = "$_AUDIO"
+vertical_alignment = 1
+
+[node name="VolumeControl" parent="Divider/Audio" index="1" instance=ExtResource("5_tpkqm")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Video" type="VBoxContainer" parent="Divider" index="3"]
+layout_mode = 2
+
+[node name="SectionLabel" parent="Divider/Video" index="0" instance=ExtResource("3_1c4m7")]
+layout_mode = 2
+text = "$_VIDEO"
+
+[node name="Settings" type="GridContainer" parent="Divider/Video" index="1"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+columns = 2
+
+[node name="LabelVSync" type="Label" parent="Divider/Video/Settings" index="0" groups=["SettingsLabel"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "$_VSYNC"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VSyncSelector" parent="Divider/Video/Settings" index="1" instance=ExtResource("6_vy66x")]
+layout_mode = 2
+
+[node name="LabelMode" type="Label" parent="Divider/Video/Settings" index="2" groups=["SettingsLabel"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "$_WINDOW_MODE"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ModeSelector" parent="Divider/Video/Settings" index="3" instance=ExtResource("7_ytaul")]
+layout_mode = 2
+
+[node name="LabelExclusive" type="Label" parent="Divider/Video/Settings" index="4" groups=["SettingsLabel"]]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "$_EXCLUSIVE_FULLSCREEN"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Exclusive" parent="Divider/Video/Settings" index="5" instance=ExtResource("8_21mqj")]
+layout_mode = 2

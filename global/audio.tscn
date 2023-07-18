@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyp3hbgk75tg6"]
-
-[ext_resource type="Script" path="res://global/audio.gd" id="1_xgwd8"]
-
-[node name="Audio" type="Node"]
-script = ExtResource("1_xgwd8")
-user_buses = ["Music", "Sounds"]

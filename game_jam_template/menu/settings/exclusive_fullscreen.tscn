@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbu5nl75d8ot"]
+
+[ext_resource type="Script" path="res://game_jam_template/menu/settings/exclusive_fullscreen.gd" id="1_ttupo"]
+
+[node name="Exclusive" type="CheckBox"]
+size_flags_horizontal = 0
+size_flags_vertical = 4
+script = ExtResource("1_ttupo")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

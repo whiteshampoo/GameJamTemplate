@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt8rwadbcovn6"]
+
+[ext_resource type="Script" path="res://game_jam_template/global/config.gd" id="1_modvh"]
+
+[node name="Config" type="Node"]
+script = ExtResource("1_modvh")
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

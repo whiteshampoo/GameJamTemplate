@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://dabdcg3fdnxnr"]
+
+[ext_resource type="PackedScene" uid="uid://c0v274i7ikfg7" path="res://game_jam_template/menu/templates/menu_template.tscn" id="1_eobli"]
+[ext_resource type="PackedScene" uid="uid://cud3k1jwxfee6" path="res://game_jam_template/menu/menu_button.tscn" id="2_xbpr8"]
+[ext_resource type="Texture2D" uid="uid://o5q5xeeiy8fg" path="res://icon.svg" id="3_gtlfl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q4gm2"]
+font_size = 32
+
+[node name="Menu" instance=ExtResource("1_eobli")]
+
+[node name="Buttons" type="VBoxContainer" parent="." index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.4
+anchor_bottom = 0.9
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" parent="Buttons" index="0" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_PLAY"
+
+[node name="Load" parent="Buttons" index="1" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_LOAD"
+
+[node name="Credits" parent="Buttons" index="2" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_CREDITS"
+target = "res://game_jam_template/menu/credits/credits.tscn"
+
+[node name="Settings" parent="Buttons" index="3" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_SETTINGS"
+target = "res://game_jam_template/menu/settings/settings.tscn"
+
+[node name="Godot" parent="Buttons" index="4" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_GODOT"
+target = "https://godotengine.org/"
+
+[node name="Itch" parent="Buttons" index="5" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_ITCH"
+target = "https://whiteshampoo.itch.io/"
+
+[node name="GameJam" parent="Buttons" index="6" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_GAMEJAM"
+target = "https://godotwildjam.com/"
+
+[node name="Quit" parent="Buttons" index="7" instance=ExtResource("2_xbpr8")]
+layout_mode = 2
+text = "$_QUIT"
+target = "QUIT"
+
+[node name="DemoContent" type="CenterContainer" parent="." index="3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Container" type="VBoxContainer" parent="DemoContent" index="0"]
+layout_mode = 2
+alignment = 1
+
+[node name="Project" type="Label" parent="DemoContent/Container" index="0"]
+layout_mode = 2
+text = "My Fancy Project"
+label_settings = SubResource("LabelSettings_q4gm2")
+
+[node name="Logo" type="TextureRect" parent="DemoContent/Container" index="1"]
+layout_mode = 2
+texture = ExtResource("3_gtlfl")
+stretch_mode = 3

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhkev0hr2f5pq"]
+
+[ext_resource type="Script" path="res://game_jam_template/menu/settings/mode_selector.gd" id="1_i7w0j"]
+
+[node name="ModeSelector" type="OptionButton"]
+offset_right = 14.0
+offset_bottom = 20.0
+script = ExtResource("1_i7w0j")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

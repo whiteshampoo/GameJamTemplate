@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1jbwvdgqgc0b"]
+
+[ext_resource type="Script" path="res://game_jam_template/global/video.gd" id="1_o441o"]
+
+[node name="Video" type="Node"]
+script = ExtResource("1_o441o")
