@@ -12,7 +12,7 @@ var SPECIAL: Dictionary = {
 			target = new_target
 			return
 		
-		if FileAccess.file_exists(new_target):
+		if ResourceLoader.exists(new_target):
 			target = new_target
 			return
 		
@@ -21,7 +21,7 @@ var SPECIAL: Dictionary = {
 			return
 		
 		if new_target == "":
-			if FileAccess.file_exists(Game.last_scene):
+			if ResourceLoader.exists(Game.last_scene):
 				target = Game.last_scene
 				return
 			target = Game.fallback_scene
@@ -45,8 +45,8 @@ func _on_pressed() -> void:
 		SPECIAL[target].call()
 		return
 	
-	if FileAccess.file_exists(target):
-		Game.last_scene = self.scene_file_path
+	if ResourceLoader.exists(target):
+		#Game.last_scene = self.scene_file_path
 		Game.change_scene_to_file(target)
 		return
 	

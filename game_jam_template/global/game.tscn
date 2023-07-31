@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://5wffivu05yx1"]
+[gd_scene load_steps=2 format=3 uid="uid://5wffivu05yx1"]
 
 [ext_resource type="Script" path="res://game_jam_template/global/game.gd" id="1_qxsq0"]
-[ext_resource type="PackedScene" uid="uid://ccvn5g8gus46t" path="res://game_jam_template/start_up/intro.tscn" id="2_isyr4"]
-[ext_resource type="PackedScene" uid="uid://uiw30j7bapu3" path="res://game_jam_template/start_up/language_select.tscn" id="3_dnyfm"]
-[ext_resource type="PackedScene" uid="uid://dabdcg3fdnxnr" path="res://game_jam_template/menu/menu.tscn" id="4_qc3wt"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_qxsq0")
-start_up_scenes = Array[PackedScene]([ExtResource("2_isyr4"), ExtResource("3_dnyfm"), ExtResource("4_qc3wt")])
+loading_screen = "res://game_jam_template/menu/loading_screen.tscn"
+start_up_scenes = PackedStringArray("res://game_jam_template/start_up/intro.tscn", "res://game_jam_template/start_up/language_select.tscn", "res://game_jam_template/menu/menu.tscn")
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -1,0 +1,2 @@
+res://game_jam_template/menu/settings/settings.tscn
+res://game_jam_template/menu/credits/credits.tscn

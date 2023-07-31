@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func load_config() -> void:
 	var config: ConfigFile = ConfigFile.new()
-	if not FileAccess.file_exists(config_file):
+	if not ResourceLoader.exists(config_file):
 		save_config()
 		return
 	if not config.load(config_file) == OK:
