@@ -21,6 +21,7 @@ Config="*res://game_jam_template/global/config.tscn"
 Video="*res://game_jam_template/global/video.tscn"
 Audio="*res://game_jam_template/global/audio.tscn"
 Game="*res://game_jam_template/global/game.tscn"
+Loader="*res://game_jam_template/global/loader.tscn"
 
 [display]
 

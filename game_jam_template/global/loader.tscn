@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://uyqa6m26n8wt"]
+
+[ext_resource type="Script" path="res://game_jam_template/global/loader.gd" id="1_vj538"]
+
+[node name="Loader" type="Node"]
+script = ExtResource("1_vj538")
